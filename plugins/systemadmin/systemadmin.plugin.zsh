@@ -31,14 +31,14 @@ function retlog() {
 
 alias ping='ping -c 5'
 alias clr='clear;echo "Currently logged in on $(tty), as $(whoami) in directory $(pwd)."'
-alias path='echo -e ${PATH//:/\\n}'
-alias mkdir='mkdir -pv'
+# alias path='echo -e ${PATH//:/\\n}'
+# alias mkdir='mkdir -pv'
 # get top process eating memory
 alias psmem='ps -e -orss=,args= | sort -b -k1,1n'
-alias psmem10='ps -e -orss=,args= | sort -b -k1,1n| head -10'
+alias psmem10='ps -e -orss=,args= | sort -b -k1,1n| tail -10'
 # get top process eating cpu if not work try excute : export LC_ALL='C'
 alias pscpu='ps -e -o pcpu,cpu,nice,state,cputime,args|sort -k1 -nr'
-alias pscpu10='ps -e -o pcpu,cpu,nice,state,cputime,args|sort -k1 -nr | head -10'
+alias pscpu10='ps -e -o pcpu,cpu,nice,state,cputime,args|sort -k1 -nr | tail -10'
 # top10 of the history
 alias hist10='print -l ${(o)history%% *} | uniq -c | sort -nr | head -n 10'
 
