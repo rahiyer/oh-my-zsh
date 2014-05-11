@@ -64,6 +64,8 @@ for plugin ($plugins); do
 done
 
 # Load all of your custom configurations from custom/
+# All files under $ZSH_CUSTOM will be sourced.
+# To avoid any file from being sourced, move to archive/
 for config_file ($ZSH_CUSTOM/*.zsh(N)); do
   source $config_file
 done
